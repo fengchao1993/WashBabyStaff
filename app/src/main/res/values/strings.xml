@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">WashBabyStaff</string>
+    <string name="Login">登录</string>
+    <string name="Login1">登陆</string>
+    <string name="zhuce">注册</string>
+    <string name="password">密码:</string>
+    <string name="phonenumber">手机号:</string>
+    <string name="yzcode">验证码:</string>
+    <string name="getyzcode">获取验证码</string>
+    <string name="getoderper">接单人员</string>
+    <string name="finish">完成</string>
+    <string name="workper">加工人员</string>
+    <string name="noworder">立即订单</string>
+    <string name="yueorder">预约订单</string>
+    <string name="accountnumber">账号:</string>
+    <string name="peoplecode">员工号：</string>
+    <string name="name">姓名:</string>
+    <string name="percode">工号:%s</string>
+    <string name="orderdetail">订单详情</string>
+</resources>
