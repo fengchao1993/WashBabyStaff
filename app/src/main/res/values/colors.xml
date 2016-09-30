@@ -5,6 +5,10 @@
     <color name="colorAccent">#FF4081</color>
     <color name="white">#ffffff</color>
     <color name="black">#000</color>
-    <color name="gray">#737373</color>
+    <color name="gray">#7f737373</color>
     <color name="blue">#00BBD2</color>
+    <color name="btbg">#1F2B4A</color>
+    <color name="diviercolor">#ECECEC</color>
+    <color name="orange">#F5BC54</color>
+    <color name="qgray">#F6F6F6</color>
 </resources>

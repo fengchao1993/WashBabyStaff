@@ -4,7 +4,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
    android:fitsSystemWindows="true"
-    tools:context="com.example.hongxingkeji.washbabystaff.ui.Activity.DetailActivity">
+    android:background="@color/qgray"
+    tools:context=".ui.Activity.DetailActivity">
     <LinearLayout
         android:id="@+id/title"
         android:layout_width="match_parent"
@@ -12,14 +13,14 @@
         android:orientation="horizontal"
         android:background="@color/blue"
         >
-        <TextView
+        <ImageView
             android:id="@+id/detailback"
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:text="返回"
-            android:gravity="center_vertical"
-            android:paddingLeft="@dimen/Padding10"
+            android:layout_weight="0.5"
+            android:src="@drawable/back"
+            android:gravity="center"
+            android:padding="@dimen/Padding5"
             android:textStyle="bold"
             android:textColor="@color/white"
             />
@@ -35,6 +36,73 @@
         <ImageView
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_weight="1"/>
+            android:layout_weight="0.5"/>
     </LinearLayout>
+    <LinearLayout
+        android:id="@+id/permsg"
+        android:layout_below="@id/title"
+        android:orientation="horizontal"
+        android:background="@color/blue"
+        android:layout_width="match_parent"
+        android:padding="@dimen/Padding10"
+        android:layout_height="wrap_content">
+        <com.example.hongxingkeji.washbabystaff.ui.View.CircleImageView
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:src="@mipmap/test"
+            />
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_marginLeft="@dimen/Padding15"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/listcode"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/listcode"
+                android:textSize="@dimen/font16"
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                />
+            <TextView
+                android:id="@+id/name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="123"
+                android:textSize="@dimen/font14"
+                android:textColor="@color/white"
+                />
+            <TextView
+                android:id="@+id/address"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="123"
+                android:textSize="@dimen/font14"
+                android:textColor="@color/white"
+                />
+            <TextView
+                android:id="@+id/other"
+                android:layout_below="@id/permsg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                />
+        </LinearLayout>
+    </LinearLayout>
+    <ListView
+        android:layout_below="@id/permsg"
+        android:id="@+id/detail_list"
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"></ListView>
+    <Button
+        android:id="@+id/anniu"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:textColor="@color/black"
+        android:text="@string/startwork"
+        />
 </RelativeLayout>

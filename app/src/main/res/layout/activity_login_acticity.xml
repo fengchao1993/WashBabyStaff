@@ -1,13 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/zu"
-    android:orientation="vertical"
     android:fitsSystemWindows="true"
-    tools:context=".ui.Activity.Activity.LoginActicity">
-
+    tools:context=".ui.Activity.LoginActicity">
     <TextView
         android:id="@+id/logintext"
         android:layout_width="match_parent"
@@ -17,11 +15,22 @@
         android:text="@string/Login"
         android:gravity="center"
         />
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_marginTop="@dimen/height50"
+        android:layout_below="@id/logintext"
+        android:layout_centerHorizontal="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/logo"
+        android:layout_centerInParent="true"
+        />
     <LinearLayout
         android:id="@+id/login_order"
+        android:layout_below="@id/logo"
         android:orientation="vertical"
         android:layout_width="wrap_content"
-        android:layout_gravity="center_horizontal"
+        android:layout_gravity="center"
         android:padding="@dimen/Padding10"
         android:layout_height="wrap_content"
         android:background="@drawable/shape">
@@ -35,7 +44,7 @@
                 android:layout_height="wrap_content"
                 android:text="@string/accountnumber"
                 android:textColor="@color/white"
-                android:textSize="@dimen/LogintextSzie"
+                android:textSize="@dimen/font16"
                 android:padding="@dimen/Padding5"
                 />
             <EditText
@@ -66,7 +75,7 @@
                 android:layout_height="wrap_content"
                 android:text="@string/password"
                 android:textColor="@color/white"
-                android:textSize="@dimen/LogintextSzie"
+                android:textSize="@dimen/font16"
                 android:padding="@dimen/Padding5"
                 />
             <EditText
@@ -74,27 +83,34 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="3"
+                android:inputType="textPassword"
                 android:background="@null"
                 style="?android:attr/textViewStyle"
                 />
             <ImageView
+                android:id="@+id/mima_img"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
+                android:src="@drawable/kejian"
+                android:padding="@dimen/Padding5"
                 />
         </LinearLayout>
 
     </LinearLayout>
     <Button
         android:id="@+id/bt_login"
+        android:layout_below="@id/login_order"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/blue"
+        android:background="@drawable/btbk"
         android:layout_margin="@dimen/height50"
         android:text="@string/Login1"
         />
     <LinearLayout
-        android:paddingTop="2dp"
+        android:layout_below="@id/bt_login"
+        android:gravity="top"
+        android:layout_marginTop="2dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
@@ -106,7 +122,7 @@
             android:layout_weight="1"
             android:textSize="@dimen/font14"
             android:gravity="center_horizontal"
-            android:textColor="@color/blue"
+            android:textColor="@color/btbg"
             android:text="@string/newstaffzc"
             />
         <TextView
@@ -115,10 +131,10 @@
             android:layout_height="wrap_content"
             android:textSize="@dimen/font14"
             android:gravity="center_horizontal"
-            android:textColor="@color/blue"
+            android:textColor="@color/btbg"
             android:text="@string/forgetpassword"
             android:layout_weight="1"
             />
     </LinearLayout>
 
-</LinearLayout>
+</RelativeLayout>

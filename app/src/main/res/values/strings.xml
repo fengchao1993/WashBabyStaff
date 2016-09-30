@@ -2,7 +2,7 @@
     <string name="app_name">WashBabyStaff</string>
     <string name="Login">登录</string>
     <string name="Login1">登陆</string>
-    <string name="zhuce">注册</string>
+    <string name="Signup">注册</string>
     <string name="password">密码:</string>
     <string name="phonenumber">手机号:</string>
     <string name="yzcode">验证码:</string>
@@ -13,8 +13,23 @@
     <string name="noworder">立即订单</string>
     <string name="yueorder">预约订单</string>
     <string name="accountnumber">账号:</string>
-    <string name="peoplecode">员工号：</string>
+    <string name="peoplecode">员工号:</string>
     <string name="name">姓名:</string>
-    <string name="percode">工号:%s</string>
+    <string name="percode">工号:123456</string>
     <string name="orderdetail">订单详情</string>
+    <string name="newstaffzc">新员工注册</string>
+    <string name="forgetpassword">忘记密码?</string>
+    <string name="alreadyorder">已接订单</string>
+    <string name="bringorder">送货订单</string>
+    <string name="afinishorder">完成订单</string>
+    <string name="mycenter">个人中心</string>
+    <string name="startwork">开始处理</string>
+    <string name="megcenter">消息中心</string>
+    <string name="megdetail">消息详情</string>
+    <string name="callmain">联系总部</string>
+    <string name="exit">退出登录</string>
+    <string name="listcode">订单编号:123456</string>
+    <string name="nowlist">即时单</string>
+    <string name="yuyuelist">预约单</string>
+    <string name="testaddress">美成逸家</string>
 </resources>

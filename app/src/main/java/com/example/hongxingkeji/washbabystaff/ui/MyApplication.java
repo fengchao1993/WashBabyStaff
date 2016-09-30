@@ -2,6 +2,11 @@ package com.example.hongxingkeji.washbabystaff.ui;
 
 import android.app.Application;
 import android.content.Context;
+import android.os.Build;
+import android.view.Window;
+import android.view.WindowManager;
+
+import com.baidu.mapapi.SDKInitializer;
 
 /**
  * Created by Lizhangfeng on 2016/1/16 0016.
@@ -15,6 +20,7 @@ public class MyApplication extends Application {
     public void onCreate() {
         super.onCreate();
         myApplication = this;
+        SDKInitializer.initialize(getApplicationContext());
     }
 
 
@@ -25,6 +31,5 @@ public class MyApplication extends Application {
     public static Context getAppContext() {
         return myApplication.getApplicationContext();
     }
-
 
 }
