@@ -1,13 +1,16 @@
 package com.example.hongxingkeji.washbabystaff.farmwork.Adapater;
 
 import android.content.Context;
+import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.TextView;
 
 import com.example.hongxingkeji.washbabystaff.R;
-import com.example.hongxingkeji.washbabystaff.ui.Bean.Message;
+import com.example.hongxingkeji.washbabystaff.farmwork.Utils.LogUtils;
+import com.example.hongxingkeji.washbabystaff.ui.Bean.TestBean.Message;
+import com.example.hongxingkeji.washbabystaff.ui.Bean.TheBean.MessageBean;
 
 import java.util.List;
 
@@ -18,12 +21,13 @@ import java.util.List;
 public class MessageAdapter extends BaseAdapter{
     private Context context;
 
-    private List<Message> strings;
+    private List<MessageBean> strings;
+
     public MessageAdapter(Context context) {
-    this.context=context;
+        this.context=context;
     }
 
-    public void setStrings(List<Message> strings) {
+    public void setStrings(List<MessageBean> strings) {
         this.strings = strings;
     }
 
@@ -54,8 +58,9 @@ public class MessageAdapter extends BaseAdapter{
         }else{
             viewHolder= (ViewHolder) view.getTag();
             }
-        viewHolder.msg.setText(strings.get(i).msg);
-        viewHolder.title.setText(strings.get(i).title);
+        viewHolder.msg.setText(strings.get(i).content);
+        LogUtils.e("TAGGGG"+strings.get(i).content);
+        viewHolder.title.setText("发布时间:"+strings.get(i).time);
         return view;
     }
 

@@ -11,7 +11,7 @@ public class MessageDetail extends BaseActivity {
 
     @Override
     public int getContentViewId() {
-        return R.layout.activity_message_detail;
+        return R.layout.activity_msgdetail;
     }
 
     @Override
@@ -21,14 +21,14 @@ public class MessageDetail extends BaseActivity {
 
     @Override
     public void initView() {
-        messagedetail=findViewByIdNoCast(R.id.messagedetail);
+        messagedetail=findViewByIdNoCast(R.id.message);
         findViewByIdNoCast(R.id.msgimgdetail_back).setOnClickListener(this);
     }
 
     @Override
     public void initData() {
         if(msg!=null)
-            messagedetail.setText(msg);
+            messagedetail.setText("  "+msg);
         else
             messagedetail.setText("没拿到数据");
     }

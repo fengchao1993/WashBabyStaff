@@ -69,7 +69,6 @@
                 android:id="@+id/name"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="123"
                 android:textSize="@dimen/font14"
                 android:textColor="@color/white"
                 />
@@ -77,7 +76,6 @@
                 android:id="@+id/address"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="123"
                 android:textSize="@dimen/font14"
                 android:textColor="@color/white"
                 />
@@ -90,12 +88,67 @@
                 />
         </LinearLayout>
     </LinearLayout>
-    <ListView
+    <!--已接订单详情-->
+    <LinearLayout
         android:layout_below="@id/permsg"
-        android:id="@+id/detail_list"
-        android:background="@color/white"
+        android:id="@+id/ll_already"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"></ListView>
+        android:layout_height="wrap_content">
+        <fragment
+            android:id="@+id/already_fragment"
+            android:name="com.example.hongxingkeji.washbabystaff.ui.Fragment.AlreadyDetailFragment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+    <!--送货订单详情-->
+    <LinearLayout
+        android:layout_below="@id/permsg"
+        android:id="@+id/ll_bring"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <fragment
+            android:id="@+id/bring_fragment"
+            android:name="com.example.hongxingkeji.washbabystaff.ui.Fragment.BringDetailFragment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+    <!--完成订单详情-->
+    <LinearLayout
+        android:layout_below="@id/permsg"
+        android:id="@+id/ll_finish"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <fragment
+            android:id="@+id/finish_fragment"
+            android:name="com.example.hongxingkeji.washbabystaff.ui.Fragment.FinishDetailFragment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+    <!--即时订单详情-->
+    <LinearLayout
+        android:layout_below="@id/permsg"
+        android:id="@+id/ll_jishi"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <fragment
+            android:id="@+id/now_fragment"
+            android:name="com.example.hongxingkeji.washbabystaff.ui.Fragment.NowDetailFragment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+    <!--预约订单详情-->
+    <LinearLayout
+        android:layout_below="@id/permsg"
+        android:id="@+id/ll_yuyue"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <fragment
+            android:id="@+id/yuyue_fragment"
+            android:name="com.example.hongxingkeji.washbabystaff.ui.Fragment.YuYueDetailFragment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+
     <Button
         android:id="@+id/anniu"
         android:layout_alignParentBottom="true"

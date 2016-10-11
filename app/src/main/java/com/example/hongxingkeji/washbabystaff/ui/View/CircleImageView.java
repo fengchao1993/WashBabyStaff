@@ -9,7 +9,7 @@ import android.graphics.Path;
 import android.graphics.Region;
 import android.util.AttributeSet;
 import android.widget.ImageView;
-
+//圆形imgView
 public class CircleImageView extends ImageView {
 
     Path path;

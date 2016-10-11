@@ -14,7 +14,9 @@ import com.example.hongxingkeji.washbabystaff.R;
 import com.example.hongxingkeji.washbabystaff.farmwork.Adapater.ListAdapater;
 import com.example.hongxingkeji.washbabystaff.farmwork.Utils.IntentUtils;
 import com.example.hongxingkeji.washbabystaff.ui.Activity.DetailActivity;
-import com.example.hongxingkeji.washbabystaff.ui.Bean.AlreadyfragData;
+import com.example.hongxingkeji.washbabystaff.ui.Bean.TestBean.AlreadyfragData;
+import com.example.hongxingkeji.washbabystaff.ui.Bean.TheBean.OrderListBean;
+import com.example.hongxingkeji.washbabystaff.ui.MyApplication;
 
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -22,11 +24,16 @@ import java.util.Date;
 import java.util.List;
 
 /**
+ * 未接单
  * Created by Administrator on 2016/9/26.
  */
 public class NogetFragment extends Fragment implements AdapterView.OnItemClickListener,View.OnClickListener{
 
     private Settitle settitle;
+
+    private Type type;
+
+    private List<OrderListBean> orderListBeen;
 
     private AlreadyfragData alreadyfragData,alreadyfragData1;
 
@@ -44,6 +51,14 @@ public class NogetFragment extends Fragment implements AdapterView.OnItemClickLi
     private View line1,line2;
 
     private TextView jishidan,yuyuedan;
+
+    public void setOrderListBeen(List<OrderListBean> orderListBeen) {
+        this.orderListBeen = orderListBeen;
+    }
+
+    public void setType(Type type) {
+        this.type = type;
+    }
 
     //回调tab状态
     public void setSettitle(Settitle settitle) {
@@ -88,25 +103,20 @@ public class NogetFragment extends Fragment implements AdapterView.OnItemClickLi
         Date curDate =new Date(System.currentTimeMillis());//获取当前时间
         String str=formatter.format(curDate);
         onclock.setText(str);
-        nowlist.addHeaderView(headview);
-        nowlist.setAdapter(listAdapater);
-        yuelist.setAdapter(listAdapater1);
-        list=new ArrayList<>();
-        for (int i = 0; i <3 ; i++) {
-            alreadyfragData=new AlreadyfragData("赵六","建设路","下单时间：一个小时前");
-            list.add(alreadyfragData);
+
+
+        if(MyApplication.getType().equals("1")){
+            nowlist.addHeaderView(headview);
+            nowlist.setAdapter(listAdapater);
+            listAdapater.setdata(orderListBeen);
+            listAdapater.notifyDataSetChanged();
+            nowlist.setOnItemClickListener(this);
+        }else{
+            yuelist.setAdapter(listAdapater1);
+            listAdapater1.setdata(orderListBeen);
+            listAdapater1.notifyDataSetChanged();
+            yuelist.setOnItemClickListener(this);
         }
-        listAdapater.setdata(list);
-        list1=new ArrayList<>();
-        for (int i = 0; i <5 ; i++) {
-            alreadyfragData1=new AlreadyfragData("路人甲","王府井","预约时间：2016年9月28日17:00-18:00");
-            list1.add(alreadyfragData1);
-        }
-        listAdapater1.setdata(list1);
-        listAdapater.notifyDataSetChanged();
-        listAdapater1.notifyDataSetChanged();
-        nowlist.setOnItemClickListener(this);
-        yuelist.setOnItemClickListener(this);
         return view;
     }
 
@@ -142,6 +152,10 @@ public class NogetFragment extends Fragment implements AdapterView.OnItemClickLi
                 yuyuedan.setTextColor(Color.parseColor("#7f737373"));
                 tab1.setVisibility(View.VISIBLE);
                 tab2.setVisibility(View.GONE);
+                b=false;
+                settitle.settitle(b);
+                type.setType("1");
+                MyApplication.setType("1");
                 break;
             case R.id.yuyuedan:
                 line1.setBackgroundColor(Color.parseColor("#ffffff"));
@@ -150,6 +164,10 @@ public class NogetFragment extends Fragment implements AdapterView.OnItemClickLi
                 yuyuedan.setTextColor(Color.parseColor("#F5BC54"));
                 tab1.setVisibility(View.GONE);
                 tab2.setVisibility(View.VISIBLE);
+                b=true;
+                type.setType("2");
+                MyApplication.setType("2");
+                settitle.settitle(b);
                 break;
         }
     }
@@ -157,5 +175,7 @@ public class NogetFragment extends Fragment implements AdapterView.OnItemClickLi
     public interface  Settitle{
         void settitle(boolean b);
     }
-
+    public interface Type{
+        void setType(String type);
+    }
 }

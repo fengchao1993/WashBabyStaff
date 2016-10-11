@@ -1,4 +1,4 @@
-package com.example.hongxingkeji.washbabystaff.ui.Bean;
+package com.example.hongxingkeji.washbabystaff.ui.Bean.TestBean;
 
 /**
  * Created by Administrator on 2016/9/27.

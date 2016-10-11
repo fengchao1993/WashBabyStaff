@@ -11,7 +11,7 @@ import com.example.hongxingkeji.washbabystaff.R;
 import com.example.hongxingkeji.washbabystaff.farmwork.Adapater.ListAdapater;
 import com.example.hongxingkeji.washbabystaff.farmwork.Utils.IntentUtils;
 import com.example.hongxingkeji.washbabystaff.ui.Activity.DetailActivity;
-import com.example.hongxingkeji.washbabystaff.ui.Bean.AlreadyfragData;
+import com.example.hongxingkeji.washbabystaff.ui.Bean.TestBean.AlreadyfragData;
 import java.util.ArrayList;
 import java.util.List;
 

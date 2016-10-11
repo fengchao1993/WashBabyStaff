@@ -7,7 +7,6 @@ import android.widget.BaseAdapter;
 import android.widget.TextView;
 
 import com.example.hongxingkeji.washbabystaff.R;
-import com.example.hongxingkeji.washbabystaff.ui.Bean.AlreadyfragData;
 
 import java.util.List;
 

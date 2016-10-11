@@ -26,7 +26,7 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="3"
-            android:text="@string/megdetail"
+            android:text="@string/clothesmsg"
             android:gravity="center"
             android:textSize="@dimen/LogintextSzie"
             android:textColor="@color/white"
@@ -37,14 +37,21 @@
             android:layout_height="match_parent"
             android:layout_weight="0.5"/>
     </LinearLayout>
-
+    <ListView
+        android:layout_below="@id/title"
+        android:id="@+id/clothes"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"></ListView>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height50"
+        android:layout_alignParentBottom="true"
+        android:background="@color/blue"
+        android:textSize="@dimen/font20"
+        android:text="@string/continuesm"
+        />
     <TextView
         android:id="@+id/messagedetail"
-        android:layout_below="@id/title"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textColor="@color/black"
-        android:textSize="@dimen/font18"
-        android:padding="@dimen/Padding15"
-        />
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
 </RelativeLayout>

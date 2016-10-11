@@ -11,4 +11,7 @@
     <color name="diviercolor">#ECECEC</color>
     <color name="orange">#F5BC54</color>
     <color name="qgray">#F6F6F6</color>
+    <color name="red">#E06458</color>
+    <color name="lightorange">#F2A500</color>
+    <color name="lightred">#F44336</color>
 </resources>

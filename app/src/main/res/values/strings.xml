@@ -32,4 +32,23 @@
     <string name="nowlist">即时单</string>
     <string name="yuyuelist">预约单</string>
     <string name="testaddress">美成逸家</string>
+    <string name="startsao">开始扫描</string>
+    <string name="clothescode">衣物编号：</string>
+    <string name="beizhu">备注:</string>
+    <string name="saomiao">扫描</string>
+    <string name="changeprice">改价</string>
+    <string name="delete">删除</string>
+    <string name="outofkulist">出库列表</string>
+    <string name="clothesmsg">衣物信息</string>
+    <string name="continuesm">继续扫码</string>
+    <string name="troubleask">错误提示</string>
+    <string name="yes">确定</string>
+    <string name="yes2">确认</string>
+    <string name="listcontent">订单内容</string>
+    <string name="yuyuetime">预约时间</string>
+
+    //测试用
+    <string name="lianxitest">联系电话：15181051314</string>
+    <string name="nametest">姓名：张三</string>
+    <string name="testaddres">取件地址：成都市东门大桥时代1号</string>
 </resources>

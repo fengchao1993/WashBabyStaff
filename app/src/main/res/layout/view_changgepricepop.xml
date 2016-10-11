@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" 
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@color/white">
+    <EditText
+        android:id="@+id/price"
+        android:layout_marginTop="@dimen/font20"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="输入修改后的价格"
+        android:textColorHint="@color/gray"
+        android:textSize="@dimen/font18"
+        android:textColor="@color/black"
+        android:inputType="number"
+        android:padding="@dimen/Padding10"
+        />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="@dimen/Padding10"
+        android:layout_marginTop="@dimen/height30"
+        android:layout_marginBottom="@dimen/height30"
+        >
+        <Button
+            android:id="@+id/queding"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@color/orange"
+            android:text="确定"
+            android:textSize="@dimen/font18"
+            />
+        <Button
+            android:id="@+id/dismiss"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@color/qgray"
+            android:text="取消"
+            android:textColor="@color/black"
+            android:textSize="@dimen/font18"
+            />
+    </LinearLayout>
+</LinearLayout>
+</LinearLayout>

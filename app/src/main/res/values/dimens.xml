@@ -3,14 +3,16 @@
     <dimen name="activity_horizontal_margin">16sp</dimen>
     <dimen name="activity_vertical_margin">16sp</dimen>
     <dimen name="LogintextSzie">22sp</dimen>
-    <dimen name="Padding5">5sp</dimen>
-    <dimen name="Padding10">10sp</dimen>
-    <dimen name="Padding15">15sp</dimen>
-    <dimen name="height50">50sp</dimen>
-    <dimen name="height30">30sp</dimen>
-    <dimen name="height1">1sp</dimen>
+    <dimen name="Padding5">5dp</dimen>
+    <dimen name="Padding10">10dp</dimen>
+    <dimen name="Padding15">15dp</dimen>
+    <dimen name="height50">50dp</dimen>
+    <dimen name="height30">30dp</dimen>
+    <dimen name="height1">1dp</dimen>
     <dimen name="font14">14sp</dimen>
     <dimen name="font16">16sp</dimen>
     <dimen name="font18">18sp</dimen>
     <dimen name="font20">20sp</dimen>
+    <dimen name="height100">100dp</dimen>
+    <dimen name="height70">70dp</dimen>
 </resources>

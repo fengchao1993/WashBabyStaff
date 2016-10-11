@@ -11,34 +11,35 @@ public class UrlUtils {
 //    //根据经纬度定位当前城市
 //    public static final String QUERYCITYBYLATITUDE = BASE_URL + "bwf_TuanChe_QueryCityByLatitude";
 //    //选择城市列表
-//    public static final String GET_CITYS = BASE_URL + "bwf_TuanChe_Getcitys";
-//    //首页Brand部分
-//    public static final String HOME_BRAND = BASE_URL + "bwf_TuanChe_HomeServlet";
-//    //首页Banner部分
-//    public static final String HOME_BANNER = BASE_URL + "bwf_TuanChe_BannerServlet";
-//    //首页-热门品牌
-//    public static final String HOT_BRAND = BASE_URL + "bwf_TuanChe_TopBrand";
-//    //首页-热门车型
-//    public static final String HOT_STYLE = BASE_URL + "bwf_TuanChe_Hotstyle";
-//    //检测更新
-//    public static final String UPDATE = BASE_URL + "bwf_TuanChe_VersionUpadteServlet";
-//    //选车-热门
-//    public static final String SELECT_TOP_BRAND = BASE_URL + "bwf_TuanChe_SelectTopBrand";
-//    //选车列表
-//    public static final String SELECT_CAR_LIST = BASE_URL + "bwf_TuanChe_XuanbrandmapServlet";
-//    //汽车详情
-//    public static final String CAR_DETAIL = BASE_URL + "bwf_TuanChe_BuyInfoServlet";
-//    //汽车列表
-//    public static final String CAR_LIST = BASE_URL + "bwf_TuanChe_BrandCarStyleServlet";
-//    //选车—级别、国别、排量
-//    public static final String CAR_TYPES = BASE_URL + "bwf_TuanChe_SelectCarInfosServlet";
-//    //搜索-热门
-//    public static final String HOT_SEARCH = BASE_URL + "bwf_TuanChe_SearchhotServlet";
-//    //团车流程
-//    public static final String TUANCHE_PROCESS = BASE_URL + "bwf_TuanChe_BuyInfoNogroupServlet";
-//    //常见问题
-//    public static final String QUESTIONS = BASE_URL + "bwf_TuanChe_BuyInfoQuestionServlet";
+    public static final String BASE_URL ="http://wash.scapp123.com/index.php/Api/";
 
+    public static final String Login ="StaffUser/login";//登录接口
 
+    public static final String GetOrder ="Order/startHandle";//接单
 
+    public static final String OrderList ="Order/orderList";//订单列表
+
+    public static final String ScanCloth ="Order/scanCloth";//取件扫描
+
+    public static final String Message ="StaffUser/noticeList";//消息接口
+
+    public static final String ChangePrice ="Order/changePrice";//改价
+
+    public static final String ChangeBz ="Order/addRemarks";//改备注
+
+    public static final String DeleteClothes ="Order/delCloth";//删除衣物
+
+    public static final String EndSm ="Order/finishScan";//结束扫描
+
+    public static final String ChangePay="Order/changePayType";//修改支付类型
+
+    public static final String Finish="Order/finishShipping";//完成送货
+
+    public static final String OrderDetail="Order/staffOrderInfo";//订单详情
+
+    public static final String Saomawash="Order/startWashing";//扫码洗涤
+
+    public static final String OutKu="Order/outKu";//出库扫码
+
+    public static final String FinishBring="Order/outKu";//完成送货
 }

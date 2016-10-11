@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:background="@color/white"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="@dimen/Padding10"
+    android:gravity="end"
+    >
+    <TextView
+        android:id="@+id/gongji"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/font16"
+        android:textColor="@color/black"
+        android:text="共计:"
+        android:layout_marginRight="@dimen/Padding10"
+        />
+    <TextView
+        android:id="@+id/sum"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/font16"
+        android:textColor="@color/blue"
+        android:layout_marginRight="@dimen/Padding10"
+        android:text="2件"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/font16"
+        android:textColor="@color/black"
+        android:text="合计:"
+        android:layout_marginRight="@dimen/Padding10"
+        />
+    <TextView
+        android:id="@+id/sum_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/font16"
+        android:textColor="@color/lightorange"
+        android:layout_marginRight="@dimen/Padding10"
+        android:text="¥60.00"/>
+</LinearLayout>
+</LinearLayout>

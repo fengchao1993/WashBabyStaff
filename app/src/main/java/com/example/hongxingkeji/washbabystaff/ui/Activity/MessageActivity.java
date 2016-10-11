@@ -1,6 +1,7 @@
 package com.example.hongxingkeji.washbabystaff.ui.Activity;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
@@ -8,9 +9,10 @@ import android.widget.Toast;
 import com.example.hongxingkeji.washbabystaff.R;
 import com.example.hongxingkeji.washbabystaff.farmwork.Adapater.MessageAdapter;
 import com.example.hongxingkeji.washbabystaff.farmwork.Base.BaseActivity;
+import com.example.hongxingkeji.washbabystaff.farmwork.Http.HttpArrayCallBack;
+import com.example.hongxingkeji.washbabystaff.farmwork.Http.HttpHelper;
 import com.example.hongxingkeji.washbabystaff.farmwork.Utils.IntentUtils;
-import com.example.hongxingkeji.washbabystaff.ui.Bean.Message;
-import java.util.ArrayList;
+import com.example.hongxingkeji.washbabystaff.ui.Bean.TheBean.MessageBean;
 import java.util.List;
 
 public class MessageActivity extends BaseActivity implements AdapterView.OnItemClickListener{
@@ -18,7 +20,6 @@ public class MessageActivity extends BaseActivity implements AdapterView.OnItemC
 
     private MessageAdapter messageAdapter;
 
-    private Message message;
     @Override
     public int getContentViewId() {
         return R.layout.activity_message;
@@ -40,8 +41,7 @@ public class MessageActivity extends BaseActivity implements AdapterView.OnItemC
 
     @Override
     public void initData() {
-        messageAdapter.setStrings(getData());
-        messageAdapter.notifyDataSetChanged();
+        getData();
     }
 
     @Override
@@ -53,22 +53,29 @@ public class MessageActivity extends BaseActivity implements AdapterView.OnItemC
 
     @Override
     public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-                Message message= (Message) messageAdapter.getItem(i);
+                MessageBean message= (MessageBean) messageAdapter.getItem(i);
                 if(message!=null){
                     Bundle  bundle=new Bundle();
-                    bundle.putString("msg",message.msg);
+                    bundle.putString("msg",message.content);
                     IntentUtils.openActivity(this,MessageDetail.class,bundle);
-                }else {
-                    Toast.makeText(this,"没数据",Toast.LENGTH_LONG).show();
                 }
     }
 
-    private List<Message> getData(){
-        List<Message> list=new ArrayList<>();
-        for (int i = 0; i <10; i++) {
-            message=new Message("消息"+i,"内容"+i);
-            list.add(message);
-        }
-        return list;
+    private void getData(){
+        HttpHelper.MessageRequest(new HttpArrayCallBack<MessageBean>() {
+            @Override
+            public void onSuccess(List<MessageBean> result) {
+                if(result!=null){
+                    messageAdapter.setStrings(result);
+                    messageAdapter.notifyDataSetChanged();
+                }
+
+            }
+            @Override
+            public void onFail(String errMsg) {
+                Toast.makeText(MessageActivity.this,errMsg.toString(),Toast.LENGTH_LONG).show();
+                Log.e("TAG",errMsg.toString());
+            }
+        });
     }
 }
